@@ -1,7 +1,7 @@
 from tkinter import *
 
 
-class MoveRect(object):
+class ObjectMove(object):
     """
     Class demonstrates tkinter canvas working.
     Here we can move and resize (auto) circle with mouse clicks.
