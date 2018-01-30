@@ -4,7 +4,7 @@ from tkinter import *
 class MoveRect(object):
     """
     Class demonstrates tkinter canvas working.
-    Here we can move rectangle with mouse clicks
+    Here we can move and resize (auto) circle with mouse clicks.
     """
     def __init__(self, width: int, height: int, dot_size: int = 10):
         """
@@ -28,6 +28,7 @@ class MoveRect(object):
         :return:
         """
         x1, y1, x2, y2 = self.__canvas.coords(self.__object)
+        self.__canvas.coords(self.__object, x1, y1, x2 + 10, y2 + 10)
         self.__canvas.move(self.__object, event.x - x1, event.y - y1)
 
 
