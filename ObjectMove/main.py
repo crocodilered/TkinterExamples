@@ -32,4 +32,4 @@ class ObjectMove(object):
         self.__canvas.move(self.__object, event.x - x1, event.y - y1)
 
 
-MoveRect(200, 200)
+ObjectMove(200, 200)
