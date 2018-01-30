@@ -31,12 +31,12 @@ class RedDotsCanvas(object):
         self.__clicked_dots = []
 
         # Init tkinter
-        self.__root = Tk()
-        self.__canvas = Canvas(self.__root, width=self.__real_size[0], height=self.__real_size[1])
-        self.__canvas.bind("<Button-1>", self.__event_canvas_mouseclick)
+        self.__window = Tk()
+        self.__canvas = Canvas(self.__window, width=self.__real_size[0], height=self.__real_size[1])
+        self.__canvas.bind("<Button-1>", self.__event_canvas_mouseclick)  # определили обработчик события
         self.__canvas.pack()
         self.__run()
-        self.__root.mainloop()
+        self.__window.mainloop()
 
     def __generate_buffer(self):
         """
@@ -84,7 +84,7 @@ class RedDotsCanvas(object):
         """
         self.__buffer = self.__generate_buffer()
         self.__draw()
-        self.__root.after(self.__refresh_rate, self.__run)
+        self.__window.after(self.__refresh_rate, self.__run)
 
 
 red_dots_canvas = RedDotsCanvas(200, 200, 10)
