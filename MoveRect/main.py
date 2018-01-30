@@ -1,5 +1,4 @@
 from tkinter import *
-from random import *
 
 
 class MoveRect(object):
